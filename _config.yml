@@ -1,8 +1,8 @@
 # Setup
 title:               더누림 성장 일지
-tagline:             'TheNurim Growth Logging'
+tagline:             'TheNurim Growth Log'
 description:         'A reserved by <a href="https://thenurim.github.io" target="_blank">더누림</a>'
-url:                 //thenurim.github.io
+url:                 https://thenurim.github.io
 baseurl:             ''
 paginate:            1
 permalink:           pretty
