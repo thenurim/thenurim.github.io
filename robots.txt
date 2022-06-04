@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thenurim.github.io/sitemap.xml
+Sitemap: https://blog.thenurim.life/sitemap.xml
