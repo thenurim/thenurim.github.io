@@ -2,7 +2,7 @@
 title:               더누림 성장 일지
 tagline:             'TheNurim Growth Log'
 description:         'A reserved by <a href="https://thenurim.life" target="_blank">더누림</a>'
-url:                 https://thenurim.life
+url:                 https://blog.thenurim.life
 baseurl:             ''
 paginate:            1
 permalink:           pretty
