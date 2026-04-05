@@ -63,6 +63,13 @@ var i18n = {
     }
     applyLang(lang);
 
+    var select = document.getElementById('lang-select');
+    if (select) {
+      select.addEventListener('change', function() {
+        setLang(this.value);
+      });
+    }
+
     document.querySelectorAll('a[href]').forEach(function(a) {
       if (a.hostname && a.hostname !== location.hostname) {
         a.setAttribute('target', '_blank');
