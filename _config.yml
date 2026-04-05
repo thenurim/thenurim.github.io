@@ -1,7 +1,8 @@
 # Setup
-title:               더누림 로그
+title:               더누림 기록
 tagline:             'THENURIM Logs'
-description:         'A reserved by <a href="https://thenurim.life" target="_blank">더누림</a>'
+# description:         'Reserved by <a href="https://thenurim.life" target="_blank">더누림</a>'
+description:         'THENURIM Business Logs'
 url:                 https://blog.thenurim.life
 baseurl:             ''
 permalink:           pretty
