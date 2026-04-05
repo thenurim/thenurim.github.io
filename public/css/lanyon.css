@@ -583,8 +583,11 @@ a.pagination-item:hover {
 /* Post tags */
 .post-tags {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
   border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 .post-tag {
