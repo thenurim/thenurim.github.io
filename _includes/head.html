@@ -25,6 +25,49 @@
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   {% endif %}
 
+  <!-- OpenGraph / SNS 공유 메타태그 -->
+  {% if page.layout == "post" %}
+    {% assign og_title = page.title | append: " · " | append: site.title %}
+    {% assign og_description = page.summary | default: site.description | strip_html | truncate: 200 %}
+    {% comment %}slug: filename에서 날짜 prefix(YYYY-MM-DD-)와 확장자 제거{% endcomment %}
+    {% assign _parts = page.path | split: "/" | last | split: ".md" | first | split: "-" %}
+    {% assign og_slug_parts = "" %}
+    {% for part in _parts offset:3 %}
+      {% if og_slug_parts == "" %}
+        {% assign og_slug_parts = part %}
+      {% else %}
+        {% assign og_slug_parts = og_slug_parts | append: "-" | append: part %}
+      {% endif %}
+    {% endfor %}
+    {% assign og_image = site.url | append: "/public/og/" | append: page.lang | append: "-" | append: og_slug_parts | append: ".png" %}
+  {% else %}
+    {% assign og_title = site.title | append: " · " | append: site.tagline %}
+    {% assign og_description = site.description | strip_html | truncate: 200 %}
+    {% assign og_image = site.url | append: "/public/apple-touch-icon-precomposed.png" %}
+  {% endif %}
+
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ og_title | xml_escape }}">
+  <meta property="og:description" content="{{ og_description | xml_escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {% if page.layout == "post" %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  {% if page.tags %}
+  {% for tag in page.tags %}
+  <meta property="article:tag" content="{{ tag }}">
+  {% endfor %}
+  {% endif %}
+  {% endif %}
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ og_title | xml_escape }}">
+  <meta name="twitter:description" content="{{ og_description | xml_escape }}">
+  <meta name="twitter:image" content="{{ og_image }}">
+
   <link rel="stylesheet" href="{{ '/public/css/poole.css' | absolute_url }}">
   <link rel="stylesheet" href="{{ '/public/css/syntax.css' | absolute_url }}">
   <link rel="stylesheet" href="{{ '/public/css/lanyon.css' | absolute_url }}">

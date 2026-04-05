@@ -1,0 +1,11 @@
+{
+  "name": "thenurim-blog",
+  "version": "1.0.0",
+  "scripts": {
+    "generate-og": "node scripts/generate-og-images.js"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "gray-matter": "^4.0.3"
+  }
+}
