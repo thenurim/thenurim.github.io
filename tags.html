@@ -1,0 +1,47 @@
+---
+layout: default
+title: Tags
+---
+
+<div class="tags-page">
+  <h2 class="tag-page-title" id="current-tag-name"></h2>
+
+  <ul id="tag-post-list">
+    {% for post in site.posts %}
+    {% if post.lang and post.tags %}
+    <li class="tag-post-item"
+        data-item-lang="{{ post.lang }}"
+        data-item-tags="{{ post.tags | join: '||' }}">
+      <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+      <span class="post-date">{{ post.date | date_to_string }}</span>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  <p id="tag-empty" style="display:none">No posts with this tag.</p>
+</div>
+
+<script>
+function filterByTag() {
+  var tag = decodeURIComponent(location.hash.replace('#', ''));
+  var lang = localStorage.getItem('lang') || 'ko';
+  var count = 0;
+
+  var title = document.getElementById('current-tag-name');
+  if (title) title.textContent = tag ? '#' + tag : '';
+
+  document.querySelectorAll('.tag-post-item').forEach(function(el) {
+    var tags = el.getAttribute('data-item-tags').split('||').map(function(t) { return t.trim(); });
+    var show = tag && tags.indexOf(tag) !== -1 && el.getAttribute('data-item-lang') === lang;
+    el.style.display = show ? '' : 'none';
+    if (show) count++;
+  });
+
+  var empty = document.getElementById('tag-empty');
+  if (empty) empty.style.display = count === 0 ? '' : 'none';
+}
+
+filterByTag();
+window.addEventListener('hashchange', filterByTag);
+</script>

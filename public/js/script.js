@@ -51,6 +51,7 @@ function setLang(lang) {
   }
 
   applyLang(lang);
+  if (typeof filterByTag === 'function') filterByTag();
 }
 
 // Script is loaded at bottom of body — DOM is ready, no need for DOMContentLoaded
