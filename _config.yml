@@ -1,17 +1,17 @@
 # Setup
-title:               더누림 성장 일지
-tagline:             'TheNurim Growth Log'
+title:               더누림 로그
+tagline:             'THENURIM Logs'
 description:         'A reserved by <a href="https://thenurim.life" target="_blank">더누림</a>'
 url:                 https://blog.thenurim.life
 baseurl:             ''
 paginate:            1
 permalink:           pretty
-github:            https://github.com/thenurim
+# github:            https://github.com/thenurim
 
 # About/contact
 author:
-  name:              TheNurim
-  url:               https://thenurim.life
+  name:              THENURIM
+  url:               https://novalink.thenurim.life
   email:             ceo@thenurim.life
 
 # Gems
