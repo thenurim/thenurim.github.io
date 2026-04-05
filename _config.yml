@@ -4,9 +4,23 @@ tagline:             'THENURIM Logs'
 description:         'A reserved by <a href="https://thenurim.life" target="_blank">더누림</a>'
 url:                 https://blog.thenurim.life
 baseurl:             ''
-paginate:            1
 permalink:           pretty
 # github:            https://github.com/thenurim
+
+# Language-based post defaults
+defaults:
+  - scope:
+      path: "_posts/en"
+      type: posts
+    values:
+      lang: en
+      permalink: /en/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/ko"
+      type: posts
+    values:
+      lang: ko
+      permalink: /ko/:year/:month/:day/:title/
 
 # About/contact
 author:
@@ -15,8 +29,7 @@ author:
   email:             ceo@thenurim.life
 
 # Gems
-plugins:
-  - jekyll-paginate
+plugins: []
 
 # Custom vars
 version:             1.1.0

@@ -14,28 +14,60 @@
   }, false);
 })(document);
 
-(function(document) {
-  var STORAGE_KEY = 'preferred-lang';
+function setLang(lang) {
+  localStorage.setItem('lang', lang);
 
-  function applyLang(lang) {
-    document.querySelectorAll('.post[data-lang]').forEach(function(post) {
-      var postLang = post.getAttribute('data-lang');
-      post.style.display = (postLang === 'all' || postLang === lang) ? '' : 'none';
-    });
-
-    document.querySelectorAll('.lang-btn').forEach(function(btn) {
-      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-    });
-
-    localStorage.setItem(STORAGE_KEY, lang);
+  var path = location.pathname;
+  if (path.match(/^\/(en|ko)\//)) {
+    location.href = path.replace(/^\/(en|ko)\//, '/' + lang + '/');
+    return;
   }
 
-  var saved = localStorage.getItem(STORAGE_KEY) || 'ko';
-  applyLang(saved);
+  applyLang(lang);
+}
 
-  document.querySelectorAll('.lang-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      applyLang(btn.getAttribute('data-lang'));
+function applyLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(function(el) {
+    el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+  });
+
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (i18n[lang] && i18n[lang][key]) {
+      el.textContent = i18n[lang][key];
+    }
+  });
+
+  var select = document.getElementById('lang-select');
+  if (select) select.value = lang;
+}
+
+var i18n = {
+  en: {
+    'nav.home':  'Home',
+    'nav.about': 'About',
+  },
+  ko: {
+    'nav.home':  '홈',
+    'nav.about': '소개',
+  }
+};
+
+(function() {
+  var lang = localStorage.getItem('lang') || 'ko';
+  document.addEventListener('DOMContentLoaded', function() {
+    var singlePost = document.querySelector('.post[data-page-lang]');
+    if (singlePost) {
+      lang = singlePost.getAttribute('data-page-lang') || lang;
+      localStorage.setItem('lang', lang);
+    }
+    applyLang(lang);
+
+    document.querySelectorAll('a[href]').forEach(function(a) {
+      if (a.hostname && a.hostname !== location.hostname) {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+      }
     });
   });
-})(document);
+})();

@@ -3,9 +3,10 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post" data-lang="{{ post.lang | default: 'all' }}">
+<div class="posts" id="posts-container">
+  {% for post in site.posts %}
+  {% if post.lang %}
+  <div class="post" data-lang="{{ post.lang }}">
     <h1 class="post-title">
       <a href="{{ post.url | absolute_url }}">
         {{ post.title }}
@@ -16,18 +17,9 @@ title: Home
 
     {{ post.content }}
 
-    <div id="disqus_thread"></div>
+    <div id="disqus_thread_{{ forloop.index }}"></div>
     <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
+        (function() {
         var d = document, s = d.createElement('script');
         s.src = 'https://deonurim-seongjang-ilji.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
@@ -35,25 +27,8 @@ title: Home
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  
-  
-  </div>
-  {% endfor %}
-</div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">예전글</a>
-  {% else %}
-    <span class="pagination-item older">예전글</span>
+  </div>
   {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ '/' | absolute_url }}">새로운글</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">새로운글</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">새로운글</span>
-  {% endif %}
+  {% endfor %}
 </div>

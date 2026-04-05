@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Introducing 더누림
-lang: en
 ---
 
 Hello.
