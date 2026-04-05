@@ -30,14 +30,12 @@
     localStorage.setItem(STORAGE_KEY, lang);
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var saved = localStorage.getItem(STORAGE_KEY) || 'ko';
-    applyLang(saved);
+  var saved = localStorage.getItem(STORAGE_KEY) || 'ko';
+  applyLang(saved);
 
-    document.querySelectorAll('.lang-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        applyLang(btn.getAttribute('data-lang'));
-      });
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      applyLang(btn.getAttribute('data-lang'));
     });
   });
 })(document);
