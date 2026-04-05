@@ -14,17 +14,16 @@
   }, false);
 })(document);
 
-function setLang(lang) {
-  localStorage.setItem('lang', lang);
-
-  var path = location.pathname;
-  if (path.match(/^\/(en|ko)\//)) {
-    location.href = path.replace(/^\/(en|ko)\//, '/' + lang + '/');
-    return;
+var i18n = {
+  en: {
+    'nav.home':  'Home',
+    'nav.about': 'About',
+  },
+  ko: {
+    'nav.home':  '홈',
+    'nav.about': '소개',
   }
-
-  applyLang(lang);
-}
+};
 
 function applyLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(function(el) {
@@ -42,39 +41,40 @@ function applyLang(lang) {
   if (select) select.value = lang;
 }
 
-var i18n = {
-  en: {
-    'nav.home':  'Home',
-    'nav.about': 'About',
-  },
-  ko: {
-    'nav.home':  '홈',
-    'nav.about': '소개',
+function setLang(lang) {
+  localStorage.setItem('lang', lang);
+
+  var path = location.pathname;
+  if (path.match(/^\/(en|ko)\//)) {
+    location.href = path.replace(/^\/(en|ko)\//, '/' + lang + '/');
+    return;
   }
-};
 
+  applyLang(lang);
+}
+
+// Script is loaded at bottom of body — DOM is ready, no need for DOMContentLoaded
 (function() {
-  var lang = localStorage.getItem('lang') || 'ko';
-  document.addEventListener('DOMContentLoaded', function() {
-    var singlePost = document.querySelector('.post[data-page-lang]');
-    if (singlePost) {
-      lang = singlePost.getAttribute('data-page-lang') || lang;
-      localStorage.setItem('lang', lang);
-    }
-    applyLang(lang);
+  // On a single post page, sync language to the post's lang
+  var singlePost = document.querySelector('.post[data-page-lang]');
+  var lang = singlePost
+    ? singlePost.getAttribute('data-page-lang')
+    : (localStorage.getItem('lang') || 'ko');
 
-    var select = document.getElementById('lang-select');
-    if (select) {
-      select.addEventListener('change', function() {
-        setLang(this.value);
-      });
-    }
+  localStorage.setItem('lang', lang);
+  applyLang(lang);
 
-    document.querySelectorAll('a[href]').forEach(function(a) {
-      if (a.hostname && a.hostname !== location.hostname) {
-        a.setAttribute('target', '_blank');
-        a.setAttribute('rel', 'noopener noreferrer');
-      }
+  var select = document.getElementById('lang-select');
+  if (select) {
+    select.addEventListener('change', function() {
+      setLang(this.value);
     });
+  }
+
+  document.querySelectorAll('a[href]').forEach(function(a) {
+    if (a.hostname && a.hostname !== location.hostname) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+    }
   });
-})();
+}());
