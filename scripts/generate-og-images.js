@@ -129,12 +129,25 @@ async function generateOGImage(slug, lang, title, summary) {
   if (summary) {
     ctx.fillStyle = 'rgba(255,255,255,0.82)';
     ctx.font = `26px sans-serif`;
-    const summaryLines = wrapText(ctx, summary, CONTENT_WIDTH).slice(0, 3);
-    for (const line of summaryLines) {
-      if (y > OG_HEIGHT - 50) break;
-      ctx.fillText(line, PADDING, y);
+    const MAX_LINES = 6;
+    const allLines = wrapText(ctx, summary, CONTENT_WIDTH);
+    const summaryLines = allLines.slice(0, MAX_LINES);
+    const needsEllipsis = allLines.length > MAX_LINES;
+    summaryLines.forEach((line, i) => {
+      if (y > OG_HEIGHT - 50) return;
+      const isLast = i === summaryLines.length - 1;
+      if (isLast && needsEllipsis) {
+        // 말줄임표가 들어갈 자리 확보 후 글자 단위로 자르기
+        let truncated = line;
+        while (truncated.length > 0 && ctx.measureText(truncated + '…').width > CONTENT_WIDTH) {
+          truncated = truncated.slice(0, -1);
+        }
+        ctx.fillText(truncated + '…', PADDING, y);
+      } else {
+        ctx.fillText(line, PADDING, y);
+      }
       y += 38;
-    }
+    });
   }
 
   // 하단 URL
