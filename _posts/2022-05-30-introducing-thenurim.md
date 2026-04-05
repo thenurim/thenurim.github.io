@@ -3,7 +3,7 @@ layout: post
 title: Introducing 더누림
 ---
 
-안녕하세요
-더누림입니다.
+Hello.
+We are THENURIM, a professional software development company.
 
-성장해 나가는 모습 보여드릴께요!
+Currently, we are developing [NovaLINK](https://novalink.thenurim.life), a low-cost, high-performance remote control software available on various platforms.
