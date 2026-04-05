@@ -2,6 +2,14 @@
 layout: post
 title: The Era of Low Growth, Labor Shortages, and Automation
 lang: en
+tags: 
+  - "Automation"
+  - "Labor Shortage"
+  - "Kiosk"
+  - "AI"
+  - "Remote Control"
+summary: Low growth, labor shortages, and automation are not separate issues, but interconnected currents of change. As workforce shortages intensify due to population decline and aging, businesses and society are actively adopting new technologies such as automation and AI to reduce costs and improve efficiency. Even in offline sectors like retail and food service, unmanned and semi-unmanned operations are on the rise, and the scope of technology utilization is broadening, leading to increased competition. However, not all tasks can be replaced by automation, and areas that only humans can handle still exist. In the midst of these changes, it is increasingly important to think about sustainability and the human role together, and to respond with balanced solutions appropriate to each situation.
+
 ---
 
 For quite some time, we've become accustomed to hearing the term "low growth". But rather than chasing a single growth rate figure, it's more helpful to examine the structural changes happening beneath the surface. In a market that no longer expands as rapidly as before, even maintaining the same sales brings increased pressure to cut costs and boost efficiency. Investment and hiring become more cautious, the threshold for launching new businesses rises, and small businesses and local economies become particularly sensitive to factors like cash flow and fixed costs such as interest rates and rent. That's why it's hard to simply dismiss low growth as just a matter of "a poor economy". The focus in decision-making seems to be shifting from "expansion" to "sustainability" and "survival". It feels appropriate now to say we live in a time where sustainable operations and profitability come before grand scaling.
