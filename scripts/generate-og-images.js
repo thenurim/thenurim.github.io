@@ -104,7 +104,7 @@ async function generateOGImage(slug, lang, title, summary) {
   // 사이트 이름 (상단)
   ctx.fillStyle = 'rgba(255,255,255,0.75)';
   ctx.font = 'bold 26px sans-serif';
-  ctx.fillText('더누림 로그', PADDING, 72);
+  ctx.fillText(lang === 'en' ? 'THENURIM Logs' : '더누림 로그', PADDING, 72);
 
   // 제목
   ctx.fillStyle = '#ffffff';
@@ -185,6 +185,7 @@ async function main() {
     const match = filename.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.md$/);
     if (!match) continue;
 
+    const date = match[1];
     const slug = match[2];
     const content = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(content);
@@ -195,10 +196,10 @@ async function main() {
     }
 
     const lang = data.lang || 'ko';
-    const outputFile = path.join(OUTPUT_DIR, `${lang}-${slug}.png`);
+    const outputFile = path.join(OUTPUT_DIR, `${lang}-${date}-${slug}.png`);
     const summary = data.summary || '';
 
-    console.log(`[생성중] ${lang}-${slug}.png`);
+    console.log(`[생성중] ${lang}-${date}-${slug}.png`);
     console.log(`  제목: ${data.title}`);
 
     try {

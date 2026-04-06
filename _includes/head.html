@@ -30,8 +30,10 @@
   {% if page.layout == "post" %}
     {% assign og_title = page.title | append: " · " | append: site.title %}
     {% assign og_description = page.summary | default: site.description | strip_html | truncate: 200 %}
-    {% comment %}slug: filename에서 날짜 prefix(YYYY-MM-DD-)와 확장자 제거{% endcomment %}
-    {% assign _parts = page.path | split: "/" | last | split: ".md" | first | split: "-" %}
+    {% comment %}파일명에서 YYYY-MM-DD와 slug 추출: _posts/ko/YYYY-MM-DD-slug.md{% endcomment %}
+    {% assign _filename = page.path | split: "/" | last | split: ".md" | first %}
+    {% assign _parts = _filename | split: "-" %}
+    {% assign og_date = _parts[0] | append: "-" | append: _parts[1] | append: "-" | append: _parts[2] %}
     {% assign og_slug_parts = "" %}
     {% for part in _parts offset:3 %}
       {% if og_slug_parts == "" %}
@@ -40,7 +42,7 @@
         {% assign og_slug_parts = og_slug_parts | append: "-" | append: part %}
       {% endif %}
     {% endfor %}
-    {% assign og_image = site.url | append: "/public/og/" | append: page.lang | append: "-" | append: og_slug_parts | append: ".png" %}
+    {% assign og_image = site.url | append: "/public/og/" | append: page.lang | append: "-" | append: og_date | append: "-" | append: og_slug_parts | append: ".png" %}
   {% else %}
     {% assign og_title = site.title | append: " · " | append: site.tagline %}
     {% assign og_description = site.description | strip_html | truncate: 200 %}

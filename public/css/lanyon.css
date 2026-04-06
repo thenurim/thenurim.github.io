@@ -571,6 +571,13 @@ a.pagination-item:hover {
   font-style: normal;
 }
 
+/* Highlighter effect for bold text */
+.post strong {
+  background: linear-gradient(to bottom, transparent 30%, #ffe066 30%, #ffe066 88%, transparent 88%);
+  font-weight: 700;
+  padding: 0 1px;
+}
+
 /* Post summary */
 .post-summary {
   border-left: 3px solid #ccc;
