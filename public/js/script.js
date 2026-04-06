@@ -26,6 +26,10 @@ var i18n = {
 };
 
 function applyLang(lang) {
+  document.body.className = document.body.className
+    .replace(/\blang-\w+\b/g, '').trim();
+  document.body.classList.add('lang-' + lang);
+
   document.querySelectorAll('[data-lang]').forEach(function(el) {
     el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
   });
@@ -45,8 +49,8 @@ function setLang(lang) {
   localStorage.setItem('lang', lang);
 
   var path = location.pathname;
-  if (path.match(/^\/(en|ko)\//)) {
-    location.href = path.replace(/^\/(en|ko)\//, '/' + lang + '/');
+  if (path.match(/^\/(en|ko|zh|es|hi|ar|bn|pt|ru|ja|de|mr|te|tr|fr|id|uk|sw|ta|ur)\//)) {
+    location.href = path.replace(/^\/(en|ko|zh|es|hi|ar|bn|pt|ru|ja|de|mr|te|tr|fr|id|uk|sw|ta|ur)\//, '/' + lang + '/');
     return;
   }
 

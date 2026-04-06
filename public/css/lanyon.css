@@ -41,16 +41,27 @@ body {
 }
 
 html {
-  font-family: "Cafe24Ohsquareair", Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+body.lang-ko,
+body.lang-en {
+  font-family: "nanumsquare", Georgia, "Times New Roman", serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Cafe24Ohsquareair", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
 }
 
+body.lang-ko h1, body.lang-ko h2, body.lang-ko h3,
+body.lang-ko h4, body.lang-ko h5, body.lang-ko h6,
+body.lang-en h1, body.lang-en h2, body.lang-en h3,
+body.lang-en h4, body.lang-en h5, body.lang-en h6 {
+  font-family: "nanumsquare", Helvetica, Arial, sans-serif;
+}
 
 /*
  * Wrapper
@@ -155,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "Cafe24Ohsquareair", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
@@ -370,7 +381,7 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "Cafe24Ohsquareair", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }
@@ -564,6 +575,8 @@ a.pagination-item:hover {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
 
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
 @font-face {
   font-family: 'Cafe24Ohsquareair';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff') format('woff');
@@ -637,6 +650,16 @@ a.pagination-item:hover {
 #tag-post-list .tag-post-item .post-date {
   color: #9a9a9a;
   font-size: .8rem;
+}
+
+body.lang-ko .sidebar,
+body.lang-en .sidebar {
+  font-family: "nanumsquare", Helvetica, Arial, sans-serif;
+}
+
+body.lang-ko .pagination,
+body.lang-en .pagination {
+  font-family: "nanumsquare", Helvetica, Arial, sans-serif;
 }
 
 /* Language selector */

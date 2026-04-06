@@ -2,7 +2,7 @@
 title:               더누림 기록
 tagline:             'THENURIM Logs'
 # description:         'Reserved by <a href="https://thenurim.life" target="_blank">더누림</a>'
-description:         '어느 S/W 회사 이야기. THENURIM Business Logs'
+description:         '어느 S/W 회사 이야기.<br/>THENURIM Business Logs'
 url:                 https://blog.thenurim.life
 baseurl:             ''
 permalink:           pretty
@@ -22,6 +22,114 @@ defaults:
     values:
       lang: ko
       permalink: /ko/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/zh"
+      type: posts
+    values:
+      lang: zh
+      permalink: /zh/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/es"
+      type: posts
+    values:
+      lang: es
+      permalink: /es/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/hi"
+      type: posts
+    values:
+      lang: hi
+      permalink: /hi/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/ar"
+      type: posts
+    values:
+      lang: ar
+      permalink: /ar/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/bn"
+      type: posts
+    values:
+      lang: bn
+      permalink: /bn/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/pt"
+      type: posts
+    values:
+      lang: pt
+      permalink: /pt/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/ru"
+      type: posts
+    values:
+      lang: ru
+      permalink: /ru/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/ja"
+      type: posts
+    values:
+      lang: ja
+      permalink: /ja/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/de"
+      type: posts
+    values:
+      lang: de
+      permalink: /de/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/mr"
+      type: posts
+    values:
+      lang: mr
+      permalink: /mr/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/te"
+      type: posts
+    values:
+      lang: te
+      permalink: /te/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/tr"
+      type: posts
+    values:
+      lang: tr
+      permalink: /tr/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/fr"
+      type: posts
+    values:
+      lang: fr
+      permalink: /fr/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/id"
+      type: posts
+    values:
+      lang: id
+      permalink: /id/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/uk"
+      type: posts
+    values:
+      lang: uk
+      permalink: /uk/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/sw"
+      type: posts
+    values:
+      lang: sw
+      permalink: /sw/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/ta"
+      type: posts
+    values:
+      lang: ta
+      permalink: /ta/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/ur"
+      type: posts
+    values:
+      lang: ur
+      permalink: /ur/:year/:month/:day/:title/
 
 # About/contact
 author:

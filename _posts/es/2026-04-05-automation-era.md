@@ -1,0 +1,30 @@
+---
+layout: post
+title: La era del bajo crecimiento, la escasez de mano de obra y la automatización
+lang: es
+tags: 
+  - "Automatización"
+  - "Escasez de mano de obra"
+  - "Quiosco"
+  - "IA"
+  - "Control remoto"
+summary: El bajo crecimiento, la escasez de mano de obra y la automatización no son asuntos aislados, sino corrientes de cambio interconectadas. A medida que la escasez de fuerza laboral se intensifica por el declive demográfico y el envejecimiento, empresas y sociedad adoptan activamente nuevas tecnologías como la automatización y la IA para reducir costos y mejorar la eficiencia. Incluso en sectores presenciales como el comercio minorista y la restauración, aumentan las operaciones sin personal o semiautomatizadas; el alcance del uso tecnológico se amplía y la competencia se intensifica. Sin embargo, no todas las tareas pueden sustituirse por automatización, y siguen existiendo ámbitos que solo las personas pueden cubrir. En medio de estos cambios, cobra importancia reflexionar conjuntamente sobre la sostenibilidad y el papel humano, y responder con equilibrio según cada contexto.
+
+---
+
+Hace tiempo que nos hemos acostumbrado a oír hablar de “bajo crecimiento”. Pero más útil que obsesionarse con una sola cifra de crecimiento es identificar los cambios estructurales que se acumulan detrás. En un mercado que ya no se expande tan rápido como antes, incluso mantener las mismas ventas genera presión para recortar más costos y subir la eficiencia. La inversión y el empleo se vuelven más cautelosos, sube el umbral para nuevos negocios, y las pymes y economías locales son especialmente sensibles al flujo de caja y a costes fijos como tipos de interés o alquileres. Por eso cuesta reducir el bajo crecimiento a un simple “mal momento económico”: la toma de decisiones parece desplazarse de la “expansión” hacia la “sostenibilidad” y la “supervivencia”. Diría que vivimos una época en la que, antes que el tamaño llamativo, se preguntan primero la operación repetible y la estructura de resultados.
+
+![](https://wimg.mk.co.kr/news/cms/202312/27/20231227_01110112000004_L00.jpg)
+Junto a esa dinámica, la realidad que antes se nota es la escasez de mano de obra. La caída de la natalidad y el envejecimiento reducen la población total, y la población en edad de trabajar baja aún más rápido. En fábricas, logística, comercio o servicios se oye en todas partes que cuesta encontrar gente. Aunque suban los salarios, puede no haber candidatos, o la formación y adaptación alargan tanto el proceso que contratar se vuelve una carga. Cuando coinciden jubilaciones y rotación de personal cualificado, los procesos se atascan pronto, y turnos nocturnos, fines de semana o tres turnos son más difíciles de cubrir. No parece un problema pasajero: es probable que se profundice de forma estructural durante décadas. Por eso las preguntas centrales para la gestión y las políticas públicas son cómo reducir o repartir el trabajo que antes hacían las personas y cómo concentrar a quienes quedan en tareas de mayor valor.
+
+Una de las respuestas es la tecnología. Las tareas repetitivas y regladas se automatizan con software; en lo que exige juicio se acelera el uso de la IA. Desde la automatización de procesos robóticos (RPA) hasta la IA generativa, proliferan herramientas orientadas a la “eficiencia”, y la nube, las API y los modelos de código abierto han abarataro la entrada. Por eso la competencia entre soluciones que apuntan al mismo problema es feroz, y “usar IA” ya no basta para diferenciarse. Creo que sobrevivirán los productos y servicios que demuestren resultados medibles: ahorro real, menos errores, mejor experiencia del cliente o transición de roles del personal. La automatización y la IA no son la panacea; solo se convierten en “herramientas” cuando la organización puede asumir el coste total —implementación, operación, seguridad, cumplimiento normativo y mantenimiento— y su capacidad interna.
+
+![](https://t1.daumcdn.net/news/201801/15/mkeconomy/20180115092959523ubbu.jpg)
+Esa tendencia también se ve claramente fuera de la red. En comercio y restauración, donde pesan costes laborales y dificultades de contratación, proliferan tiendas sin personal y locales con plantilla mínima. Integrar pago, inventario, acceso y monitorización con software y sensores no es solo “eliminar personas”: amplía horarios y opciones de ubicación, y deja datos de ventas e inventario para la siguiente decisión. Las franquicias y los procedimientos operativos estandarizados encajan a menudo con modelos sin personal o semiautomatizados. Aun así, siguen haciendo falta personas para atención al cliente, conflictos, emergencias o el cuidado de colectivos vulnerables. La automatización no es la respuesta para todos los locales, pero donde coinciden bajo crecimiento y escasez de mano de obra se ha vuelto una opción difícil de eludir.
+
+![](https://img4.yna.co.kr/photo/yna/YH/2025/02/23/PYH2025022303060001300_P4.jpg)
+[“Para bajar costes laborales”… Aumenta la demanda de comandas en mesa con tableta](https://www.yna.co.kr/view/AKR20250221087900017)
+
+Para mí, bajo crecimiento, escasez de mano de obra, automatización y operación sin personal no son etiquetas sueltas, sino eslabones de una misma cadena. Si el crecimiento se frena, sube la presión para recortar costos y la plantilla se reduce; para compensar se apuesta por la tecnología, y la tecnología cambia incluso la gestión presencial. Más que negar esa cadena, importa decidir en cada paso qué conservar y qué cambiar.
+
+En suma, la época actual no se explica solo con el mito del crecimiento. Los cambios demográficos no se revierten de la noche a la mañana, y la tecnología se convierte en un terreno de competencia y experimentación cada vez más intenso. Lo que se pide a empresas y desarrolladores no es seguir modas, sino analizar costes y riesgos sobre el terreno, el papel de las personas y diseñar formas sostenibles. Hay más herramientas que nunca, pero decidir dónde usarlas sigue siendo tarea humana. Por eso THENURIM quiere apoyar con software justo en ese punto.
