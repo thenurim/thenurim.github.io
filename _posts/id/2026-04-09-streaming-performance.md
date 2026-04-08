@@ -43,4 +43,6 @@ Dari situlah NovaLINK. Bukan «satu program lagi»: kami mendefinisikan dan meng
 
 Sejujurnya, tidak ada perangkat lunak kendali jarak jauh yang «optimal» untuk setiap jaringan, perangkat keras, dan industri—terlalu banyak variabel: kualitas jalur, kebijakan firewall, posisi relay, spesifikasi perangkat, aplikasi lain yang berjalan. Solusi yang sama bisa terasa cepat di intranet dan mengecewakan ke cabang luar negeri. Sulit menyimpulkan «produk buruk» dalam satu kalimat, tetapi bagi pengguna hasilnya sama: lambat dan stres. Kami tetap mengembangkan NovaLINK dengan tujuan jelas: mengurangi latensi yang tidak perlu, menjaga kualitas layar yang terbaca, dan kepraktisan di lingkungan jalur lapangan. Bukan «nomor satu di mana-mana», melainkan memperluas jangkauan yang bisa kami tanggung jawabkan dan meningkatkan secara konsisten di dalamnya. Tanpa mendefinisikan batas itu, sulit menilai kemajuan. Menetapkan dan memvalidasi definisi kinerja sendiri menancapkan arah produk.
 
+![NovaLINK TestSuite]({{site.baseurl}}/public/post_imgs/260409/testsuite.png)
+
 Kami akan terus menyempurnakan kriteria berdasarkan umpan balik dan pengukuran nyata. Semakin transparan definisinya, semakin jujur dasar perbandingan bagi yang mempertimbangkan adopsi. Di blog ini kami akan berbagi metode, interpretasi, dan trial-and-error dalam perbaikan sedetail mungkin.

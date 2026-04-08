@@ -43,4 +43,6 @@ Daí o NovaLINK. Não é «mais um programa»: definimos e medimos desempenho pe
 
 Com franqueza, não há software de controle remoto «ótimo» para toda rede, hardware e setor — variáveis demais: linha, firewall, posição do relay, especificações, outros apps. A mesma solução pode rápida na intranet e frustrante para filial no exterior. Não dá para resumir em «produto ruim», mas para o usuário o resultado é o mesmo: lentidão e estresse. Ainda assim desenvolvemos o NovaLINK com metas claras: menos latência desnecessária, qualidade legível, utilidade prática em condições de campo. Não «número um em todo lugar», mas ampliar o alcance que assumimos e melhorar de forma consistente. Sem definir esse alcance, não julgamos progresso. Definir e validar o desempenho ancora a direção do produto.
 
+![NovaLINK TestSuite]({{site.baseurl}}/public/post_imgs/260409/testsuite.png)
+
 Continuaremos refinando critérios com feedback e medições reais. Quanto mais transparente a definição, mais honesta a base para quem avalia adoção. Neste blog: métodos, interpretação e tentativa e erro em detalhe.

@@ -82,4 +82,51 @@ function setLang(lang) {
       a.setAttribute('rel', 'noopener noreferrer');
     }
   });
+
+  // Markdown ![caption](url) → alt는 접근성용으로만 쓰이므로, 동일 문구를 이미지 아래에 캡션으로 표시
+  (function enhancePostImageCaptions() {
+    var post = document.querySelector('.post');
+    if (!post) return;
+
+    post.querySelectorAll('img').forEach(function(img) {
+      if (img.closest('figure')) return;
+
+      var altText = (img.getAttribute('alt') || '').trim();
+      if (!altText) return;
+
+      var figcaption = document.createElement('figcaption');
+      figcaption.textContent = altText;
+      img.setAttribute('alt', '');
+
+      var figure = document.createElement('figure');
+      figure.className = 'post-img-figure';
+
+      var parent = img.parentNode;
+      if (parent && parent.tagName === 'A' && parent.childElementCount === 1 &&
+          parent.firstElementChild === img) {
+        var block = parent.parentNode;
+        if (!block) return;
+        block.insertBefore(figure, parent);
+        figure.appendChild(parent);
+        figure.appendChild(figcaption);
+      } else if (parent) {
+        parent.insertBefore(figure, img);
+        figure.appendChild(img);
+        figure.appendChild(figcaption);
+      }
+    });
+  }());
+
+  // <a><img …>본문 텍스트</a> 처럼 링크에 이미지와 텍스트가 함께 있으면 img 하단 margin 제거용 클래스
+  (function markAnchorsWithImgAndText() {
+    var post = document.querySelector('.post');
+    if (!post) return;
+
+    post.querySelectorAll('a[href]').forEach(function(a) {
+      if (!a.querySelector('img')) return;
+      if (a.textContent.replace(/\uFEFF/g, '').trim().length > 0) {
+        a.classList.add('post-a-has-img-text');
+      }
+    });
+  }());
 }());

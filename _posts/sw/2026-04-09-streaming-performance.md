@@ -43,4 +43,6 @@ Hapo ndipo NovaLINK. Lengo si «programu nyingine ya udhibiti wa mbali»: tunafa
 
 Kwa ukweli, hakuna programu ya udhibiti wa mbali «bora zaidi» kwa kila mtandao, vifaa na sekta — mabadiliko mengi sana: ubora wa laini, sera ya ukuta wa moto, mahali pa relay, vipimo vya kifaa, programu nyingine. Suluhisho moja linaweza kuonekana haraka kwenye mtandao wa ndani na kukasirisha kwenye tawi la nje. Ni vigumu kusema «bidhaa mbaya» kwa senti moja, lakini kwa mtumiaji matokeo ni sawa: polepole na mkazo. Hata hivyo tunaendeleza NovaLINK kwa malengo wazi: kupunguza ucheleweshaji usio wa lazima, kuendeleza ubora wa skrini unaosomeka, na ufanisi wa vitendo katika masharti ya laini ya shambani. Si «nambari moja kila mahali» bali kupanua wigo tunaoweza kuwajibika na kuboresha ndani yake kwa uthabiti. Bila kufafanua mipaka hiyo, ni vigumu kuhukumu maendeleo. Kuweka na kuthibitisha ufafanuzi wetu wa utendaji ndicho kinacholaza mwelekeo wa bidhaa.
 
+![NovaLINK TestSuite]({{site.baseurl}}/public/post_imgs/260409/testsuite.png)
+
 Tutaendelea kunoa vigezo kulingana na maoni na matokeo halisi. Kadri ufafanuzi unavyo wazi, ndivyo msingi wa ulinganisho unavyo kuwa wa kweli kwa wanaofikiria kuitekeleza. Katika blogu hii tutashiriki mbinu, tafsiri na majaribio na makosa kwa undani kadri iwezekanavyo.

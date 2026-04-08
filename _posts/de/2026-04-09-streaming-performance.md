@@ -43,4 +43,7 @@ Daraus entstand NovaLINK. Es soll nicht „noch ein Programm“ sein. Wir defini
 
 Offen gesagt gibt es keine Fernsteuerungssoftware, die für jedes Netz, jedes Gerät und jede Branche „optimal“ ist – zu viele Variablen: Leitung, Firewall, Relay-Standort, Gerät, parallel laufende Apps. Dieselbe Lösung kann im LAN flüssig sein und im Ausland frustrierend. Man kann nicht pauschal „schlechte Software“ sagen, doch für Nutzer zählt das Ergebnis: Verzögerung und Stress. Trotzdem entwickeln wir NovaLINK mit klaren Zielen: unnötige Latenz reduzieren, lesbare Bildqualität, praktische Nutzbarkeit unter Feld-Bedingungen. Nicht „überall Platz eins“, sondern den Bereich erweitern, für den wir Verantwortung übernehmen und darin konsistent verbessern. Ohne diese Grenzen definieren wir keine Fortschritte. Wir glauben: Definition und Validierung der Leistung verankern die Produktrichtung.
 
+![NovaLINK TestSuite]({{site.baseurl}}/public/post_imgs/260409/testsuite.png)
+
+
 Wir werden Kriterien weiter anhand von Feedback und Messungen schärfen. Je transparenter die Definition, desto ehrlicher die Vergleichsbasis für Interessenten. In diesem Blog sollen Messmethoden, Auswertung und Trial-and-Error möglichst konkret werden.

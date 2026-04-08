@@ -43,4 +43,6 @@ D’où NovaLINK. Pas « un programme de plus » : nous définissons et mesurons
 
 Franchement, aucun logiciel de contrôle à distance n’est « optimal » pour tous réseaux, matériels et secteurs — trop de variables. Qualité de ligne, pare-feu, relais, specs, applications ouvertes. La même solution peut sembler rapide en intranet et frustrante vers un bureau à l’étranger. Difficile de tout attribuer au « mauvais produit », mais pour l’utilisateur le résultat est le même : lenteur et stress. Nous développons NovaLINK avec des objectifs clairs : réduire latence inutile, garder une image lisible, rester utilisable sur le terrain. Pas « premier partout », mais élargir la portée dont nous assumons la responsabilité et nous y améliorer de façon cohérente. Sans définir ces limites, impossible de juger les progrès. Définir et valider la performance, c’est ancrer la direction du produit.
 
+![NovaLINK TestSuite]({{site.baseurl}}/public/post_imgs/260409/testsuite.png)
+
 Nous affinerons les critères avec retours et mesures réelles. Plus la définition est transparente, plus la comparaison est honnête pour ceux qui envisagent l’adoption. Sur ce blog : méthodes, interprétation et essais-erreurs en détail.

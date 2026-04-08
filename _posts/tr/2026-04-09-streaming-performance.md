@@ -43,4 +43,6 @@ Bu girişim NovaLINK. Amaç «bir uzaktan kumanda programı daha» değil. Ekran
 
 Dürüst olmak gerekirse her ağ, donanım ve sektör için aynı derecede «en uygun» uzaktan kumanda yazılımı yok; değişken çok: hat kalitesi, güvenlik duvarı, röle konumu, uç özellikleri, eşzamanlı uygulamalar. Aynı yazılım iç ağda hızlı, yurtdışı şubede bunaltıcı hissedilebilir. «Kötü ürün» demek tek cümleyle zor; kullanıcı için sonuç aynı: gecikme ve stres. Yine de NovaLINK’i net hedeflerle geliştiriyoruz: gereksiz gecikmeyi azaltmak, okunabilir ekran kalitesi, saha hat koşullarında kullanılabilirlik. «Her yerde birinci» değil; sorumluluk alabileceğimiz kapsamı genişletip içinde tutarlı iyileştirme. Bu kapsamı kendimiz tanımlamazsak ilerlemeyi de yargılayamayız. Performans tanımını kurup doğrulamak ürün yönünü sabitler.
 
+![NovaLINK TestSuite]({{site.baseurl}}/public/post_imgs/260409/testsuite.png)
+
 Gerçek kullanıcı geri bildirimi ve ölçümlerle kriterleri sürekleştiriyoruz. Tanım ne kadar şeffaf olursa benimseyenler için karşılaştırma o kadar dürüst olur. Bu blogda ölçüm yöntemi, yorum ve iyileştirme sürecindeki deneme-yanılmayı mümkün olduğunca somut anlatacağız.
