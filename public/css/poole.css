@@ -353,15 +353,28 @@ tbody tr:nth-child(odd) th {
   color: #9a9a9a;
 }
 
+/* 포스트 본문 이미지: 항상 컨테이너 폭에 맞춤 */
+.post img {
+  width: 100%;
+  height: auto;
+}
+
 /* Markdown 이미지: ![캡션](url) → 스크립트가 figure/figcaption으로 감싼 뒤 하단에 캡션 표시 */
 .post figure.post-img-figure {
+  display: block;
+  width: 100%;
   margin: 1rem 0;
 }
 .post figure.post-img-figure img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-bottom: 0; /* 캡션(figcaption)과 간격은 figcaption margin-top으로만 */
+}
+.post a.post-a-has-img-text {
+  display: block;
+  text-align: center;
+  font-size: 0.85em;
 }
 .post a.post-a-has-img-text img {
   margin-bottom: 0; /* 링크 안 이미지 + 뒤이어 오는 텍스트가 한 줄로 붙도록 */
